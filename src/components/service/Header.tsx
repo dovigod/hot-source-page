@@ -41,7 +41,13 @@ export const Header = () => {
           )}
         </VStack>
         <Spacer />
-        <Typo as="span" variant="sm" noOfLines={2} color="grayscale.200">
+        <Typo
+          as="span"
+          variant="sm"
+          noOfLines={2}
+          color="grayscale.200"
+          fontSize="rg"
+        >
           {date}
         </Typo>
       </Flex>
