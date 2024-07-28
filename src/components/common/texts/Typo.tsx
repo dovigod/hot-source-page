@@ -17,7 +17,7 @@ export const Typo = forwardRef(
         : variants === "rg"
         ? "regular"
         : "";
-    const lineHeight = "fit";
+    const lineHeight = "140%";
     const letterspacing = "normal";
     const as = "span";
 

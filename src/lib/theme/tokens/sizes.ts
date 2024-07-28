@@ -22,6 +22,7 @@ export const sizes = {
     md: '768px',
     lg: '1024px',
     xl: '1280px',
-    max: '1200px'
+    min: '1280px',
+    max: '1920px'
   }
 }

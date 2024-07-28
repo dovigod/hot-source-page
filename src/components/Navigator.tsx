@@ -14,9 +14,10 @@ import { Logo } from "./common/Logo";
 import { Typo } from "./common/texts/Typo";
 import { Search } from "./Search";
 import { useEffect } from "react";
+import Link from "next/link";
 
-export const Header = () => {
-  const { isOpen, onToggle } = useDisclosure();
+export const Navigator = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     if (isOpen) {
@@ -32,30 +33,36 @@ export const Header = () => {
   return (
     <Flex
       justifyContent="center"
-      zIndex="tooltip"
+      zIndex="banner"
       position="fixed"
       top="0px"
       left="0px"
-      width="full"
-      as="header"
-      maxW="100vw"
+      width="100vw"
+      maxW="container.max"
+      minW="container.min"
       py="s24"
+      as="nav"
       backgroundColor={"white"}
     >
-      <VStack width="full" maxW="container.max">
+      <VStack
+        width="full"
+        maxW="container.max"
+        minWidth="container.min"
+        px="s40"
+      >
         <Flex align="center" width="full">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <Spacer />
-          <nav>
-            <HStack spacing="4">
-              <Button variant="link" colorScheme="black" onClick={onToggle}>
-                <Typo variants="md">검색</Typo>
-              </Button>
-              <Button colorScheme="black" variant="link">
-                <Typo variants="md">문의하기</Typo>
-              </Button>
-            </HStack>
-          </nav>
+          <HStack spacing="4">
+            <Button variant="link" colorScheme="black" onClick={onOpen}>
+              <Typo variants="md">검색</Typo>
+            </Button>
+            <Button colorScheme="black" variant="link">
+              <Typo variants="md">문의하기</Typo>
+            </Button>
+          </HStack>
         </Flex>
         <Box width="full">
           <Collapse
@@ -79,7 +86,8 @@ export const Header = () => {
             position="fixed"
             top="0px"
             left="0px"
-            zIndex="overlay"
+            zIndex="sticky"
+            onClick={onClose}
           />
         </Portal>
       )}

@@ -8,5 +8,6 @@ export const radii = {
   '2xl': '1rem',
   '3xl': '1.5rem',
   full: '9999px',
-  square: '18%'
+  square: '18%',
+  squareBig: '12rem'
 }

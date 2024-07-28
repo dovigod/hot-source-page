@@ -1,18 +1,24 @@
 import { Container, Flex, Grid, GridItem, VStack } from "@chakra-ui/react";
-import { Header } from "@/app/components/Header";
-import { Service } from "./components/Service";
+import { Navigator } from "@/components/Navigator";
+import { Service } from "../components/Service";
 
 export default function Home() {
   return (
-    <VStack as="main" maxWidth="container.max" width="full" py="s100">
-      <Header />
+    <VStack
+      maxWidth="container.max"
+      minWidth="container.min"
+      width="full"
+      py="s100"
+    >
+      <Navigator />
 
       <Grid
-        as="section"
+        as="main"
         templateColumns="repeat( auto-fill, minmax(282px, 1fr) );"
         gap={"24px"}
         rowGap={"80px"}
         width="full"
+        px="40px"
       >
         <GridItem>
           <Service
