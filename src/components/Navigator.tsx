@@ -36,25 +36,19 @@ export const Navigator = () => {
       zIndex="banner"
       position="fixed"
       top="0px"
-      left="0px"
+      left="50%"
       width="100vw"
       maxW="container.max"
-      minW="container.min"
+      transform="translateX(-50%)"
       py="s24"
       as="nav"
       backgroundColor={"white"}
     >
-      <VStack
-        width="full"
-        maxW="container.max"
-        minWidth="container.min"
-        px="s40"
-      >
-        <Flex align="center" width="full">
+      <VStack width="full" maxW="container.max" px="s40">
+        <Flex align="center" justify="space-between" width="full">
           <Link href="/">
             <Logo />
           </Link>
-          <Spacer />
           <HStack spacing="4">
             <Button variant="link" colorScheme="black" onClick={onOpen}>
               <Typo variants="md">검색</Typo>

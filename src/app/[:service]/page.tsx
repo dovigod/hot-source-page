@@ -17,7 +17,6 @@ export default function ServicePage() {
   });
 
   const { open, src } = useZoomStore();
-
   return (
     <VStack
       maxWidth="container.max"

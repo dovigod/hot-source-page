@@ -1,4 +1,5 @@
-import { Container, Flex, Grid, GridItem, VStack } from "@chakra-ui/react";
+"use client";
+import { Grid, GridItem, VStack } from "@chakra-ui/react";
 import { Navigator } from "@/components/Navigator";
 import { Service } from "../components/Service";
 
@@ -14,9 +15,9 @@ export default function Home() {
 
       <Grid
         as="main"
-        templateColumns="repeat( auto-fill, minmax(282px, 1fr) );"
-        gap={"24px"}
-        rowGap={"80px"}
+        templateColumns="repeat( auto-fill, minmax(282px, 282px) );"
+        gap="24px"
+        rowGap="80px"
         width="full"
         px="40px"
       >
